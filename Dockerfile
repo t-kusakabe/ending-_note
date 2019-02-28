@@ -17,5 +17,5 @@ RUN apk add --no-cache \
       yaml \
       yaml-dev
 
-COPY Gemfile Gemfile.lock ./
+ADD Gemfile Gemfile.lock ./
 RUN bundle install
