@@ -21,8 +21,7 @@ services:
       dockerfile: "./docker/Dockerfile_node"
     container_name: "ending_note_front"
     volumes: 
-      - ./front:/ending_note/front
-      - ./lib/public:/ending_note/lib/public
+    - .:/ending_note
     tty: true
     stdin_open: true
 

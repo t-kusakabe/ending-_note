@@ -1,7 +1,7 @@
 FROM node:11.10.1-alpine
 
-WORKDIR /app/front
+WORKDIR /ending_note
 
-COPY yarn.lock ./
+ADD package.json yarn.lock ./
 
 RUN yarn install --ignore-engins
