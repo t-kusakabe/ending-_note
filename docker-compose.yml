@@ -5,6 +5,7 @@ services:
     container_name: "ending_note_app"
     ports:
       - "4567:4567"
+    command: rackup -p 4567 -o 0.0.0.0
     volumes:
       - .:/ending_note
     depends_on:
