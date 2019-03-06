@@ -1,0 +1,7 @@
+FROM node:11.10.1-alpine
+
+WORKDIR /app/front
+
+COPY yarn.lock ./
+
+RUN yarn install --ignore-engins

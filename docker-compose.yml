@@ -1,7 +1,9 @@
 version: '3'
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: "./docker/Dockerfile_ruby"
     container_name: "ending_note_app"
     ports:
       - "4567:4567"
@@ -10,6 +12,17 @@ services:
       - .:/ending_note
     depends_on:
       - db
+    tty: true
+    stdin_open: true
+
+  front:
+    build:
+      context: .
+      dockerfile: "./docker/Dockerfile_node"
+    container_name: "ending_note_front"
+    volumes: 
+      - ./front:/ending_note/front
+      - ./lib/public:/ending_note/lib/public
     tty: true
     stdin_open: true
 
