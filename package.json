@@ -5,6 +5,9 @@
   "repository": "git@github.com:t-kusakabe/ending_note.git",
   "author": "t-kusakabe <ttmac0704@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel lib/public/index.html -d public --hmr-port 8080"
+  },
   "devDependencies": {
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.2",
